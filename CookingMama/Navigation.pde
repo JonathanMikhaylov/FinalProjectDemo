@@ -8,8 +8,10 @@ public class Navigation{
   
   3 = BeefSteak
   4 = Cutting Stage
-  5 = Seasoning Stage
-  6 = Melting Butter
+  5 = VeryGood
+  6 = BeefSteak2
+  7 = Seasoning Stage
+  8 = Melting Butter
   */
   String cooking;
   
@@ -19,7 +21,7 @@ public class Navigation{
   }
   
   void loadImages(){
-    for (int i = 0; i < 5; i++){
+    for (int i = 0; i < 6; i++){
       Screens.add(loadImage("Screen" + i + ".jpg"));
     }
   }  
@@ -41,5 +43,6 @@ public class Navigation{
     if (CurrentScreen == 3 && mouseX >= 206 && mouseX <= 264 && mouseY >= 612 && mouseY <= 677){
       CurrentScreen = 4;
     }
+
   }
 }

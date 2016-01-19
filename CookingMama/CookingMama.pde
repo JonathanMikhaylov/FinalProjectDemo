@@ -61,9 +61,12 @@ void BeefSteak() {
         image(BeefSteak.Beef.get(BeefSteak.process), meatx, meaty);
       }
     }
-    if (Navigation.CurrentScreen == 5) {
-      text("hi", 3, 4);
+    if (Navigation.CurrentScreen == 4 && BeefSteak.FirstCut == true && BeefSteak.SecondCut == true){
+      Navigation.CurrentScreen = 5;
     }
+    //if (Navigation.CurrentScreen == 5) {
+    //  text("hi", 3, 4);
+    //}
   }
 }
 
