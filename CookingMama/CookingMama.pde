@@ -73,11 +73,15 @@ void BeefSteak() {
       Navigation.CurrentScreen = 5;
     }
     if (Navigation.CurrentScreen == 5) {
-      counter = 0;
-      counter++;
-      if (counter == 5) {
-        
-      }
+delay(10000);      //counter++;
+      //System.out.println(counter);
+      //while (counter < 20) {
+      //  counter++;
+      //}
+      //if (counter == 4) {
+        Navigation.CurrentScreen = 6;
+        counter = 0;
+        //}
     }
 
     //if (Navigation.CurrentScreen == 5) {
