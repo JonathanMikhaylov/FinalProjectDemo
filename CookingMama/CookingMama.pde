@@ -59,11 +59,27 @@ void BeefSteak() {
         BeefSteak.SecondCut = true;
         BeefSteak.secondCut();
         image(BeefSteak.Beef.get(BeefSteak.process), meatx, meaty);
+        if (BeefSteak.process == 10) {
+          BeefSteak.FirstCut = true;
+          BeefSteak.SecondCut = true;
+          
+        }
       }
+    }
+     if (Navigation.CurrentScreen == 4) {            
+    timer();
     }
     if (Navigation.CurrentScreen == 4 && BeefSteak.FirstCut == true && BeefSteak.SecondCut == true){
       Navigation.CurrentScreen = 5;
     }
+    if (Navigation.CurrentScreen == 5) {
+      counter = 0;
+      counter++;
+      if (counter == 5) {
+        
+      }
+    }
+
     //if (Navigation.CurrentScreen == 5) {
     //  text("hi", 3, 4);
     //}
@@ -71,9 +87,16 @@ void BeefSteak() {
 }
 
 void timer() {
-  counter++;
+  //counter++;
   translate(133, 138);
   rotate(counter*TWO_PI/360);
+  if (counter < 360) {
+    counter++;
+  } if (counter == 360) {
+      delay(3000);
+      Navigation.CurrentScreen = 3;
+
+  }
   translate(-ticker.width/2, -ticker.height/2);
   image(ticker, 0, 0);
 }
@@ -81,9 +104,6 @@ void timer() {
 void draw() {
   background(Navigation.Screens.get(Navigation.CurrentScreen));
   BeefSteak();
-  if (Navigation.CurrentScreen == 4) {            
-    timer();
-  }
 
   y++;
   if (y > height) {

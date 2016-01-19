@@ -21,7 +21,7 @@ public class Navigation{
   }
   
   void loadImages(){
-    for (int i = 0; i < 6; i++){
+    for (int i = 0; i < 7; i++){
       Screens.add(loadImage("Screen" + i + ".jpg"));
     }
   }  
@@ -43,6 +43,11 @@ public class Navigation{
     if (CurrentScreen == 3 && mouseX >= 206 && mouseX <= 264 && mouseY >= 612 && mouseY <= 677){
       CurrentScreen = 4;
     }
-
+    if (CurrentScreen == 3 && mouseX >= 22 && mouseX <= 152 && mouseY >= 687 && mouseY <= 719){
+      CurrentScreen = 2;
+    }
+    if (CurrentScreen == 6 && mouseX >= 22 && mouseX <= 152 && mouseY >= 687 && mouseY <= 719){
+      CurrentScreen = 2;
+    }
   }
 }
